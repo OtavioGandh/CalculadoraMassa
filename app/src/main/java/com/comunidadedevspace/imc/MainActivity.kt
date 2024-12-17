@@ -13,14 +13,15 @@ class MainActivity : AppCompatActivity() {
 
         val edtPeso = findViewById<TextInputEditText>(R.id.edittext_peso);
         val edtAltura = findViewById<TextInputEditText>(R.id.edittext_altura);
-        val btnCalcular = findViewById<Button>(R.id.btn_calcular);
+        val btnCalcular = findViewById<Button>(R.id.btn_calcular)
 
             btnCalcular.setOnClickListener{
-                val peso = edtPeso.text;// esse .text é usado para guardar a informação digitada no peso
-                val altura = edtAltura.text // usado para guardar a info da altura
-                println("OTAVIO sua altura é de :"+ altura);
+                val peso: Float = edtPeso.text.toString().toFloat();// esse .text é usado para guardar a informação digitada no peso
+                val altura: Float = edtAltura.text.toString().toFloat() // usado para guardar a info da altura
 
-
+                val alturaQ2 = altura * altura;
+                val resultado = peso / alturaQ2;
+                println("Rodano o codigo" + resultado)
 
             }
     }
